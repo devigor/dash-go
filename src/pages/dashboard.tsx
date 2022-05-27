@@ -1,9 +1,9 @@
-import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { Box, Flex, SimpleGrid, Text, theme } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
-import { Header } from "../components/Header";
-import { Sidebar } from "../components/Siderbar";
+import { Header } from '../components/Header'
+import { Sidebar } from '../components/Sidebar'
 
 const options = {
   chart: {
@@ -25,7 +25,7 @@ const options = {
     enabled: false,
   },
   xaxis: {
-    type: "datetime",
+    type: 'datetime',
     axisBorder: {
       color: theme.colors.gray[600],
     },
@@ -33,27 +33,27 @@ const options = {
       color: theme.colors.gray[600],
     },
     categories: [
-      "2021-03-18T00:00:00.000z",
-      "2021-03-19T00:00:00.000z",
-      "2021-03-20T00:00:00.000z",
-      "2021-03-21T00:00:00.000z",
-      "2021-03-22T00:00:00.000z",
-      "2021-03-23T00:00:00.000z",
-      "2021-03-24T00:00:00.000z",
+      '2021-03-18T00:00:00.000z',
+      '2021-03-19T00:00:00.000z',
+      '2021-03-20T00:00:00.000z',
+      '2021-03-21T00:00:00.000z',
+      '2021-03-22T00:00:00.000z',
+      '2021-03-23T00:00:00.000z',
+      '2021-03-24T00:00:00.000z',
     ],
   },
   fill: {
     opacity: 0.3,
-    type: "gradient",
+    type: 'gradient',
     gradient: {
-      shade: "dark",
+      shade: 'dark',
       opacityFrom: 0.7,
       opacityTo: 0.3,
     },
   },
-};
+}
 
-const series = [{ name: "Series One", data: [31, 10, 120, 80, 90, 200, 100] }];
+const series = [{ name: 'Series One', data: [31, 10, 120, 80, 90, 200, 100] }]
 
 export default function Dashboard() {
   return (
@@ -84,5 +84,5 @@ export default function Dashboard() {
         </SimpleGrid>
       </Flex>
     </Flex>
-  );
+  )
 }
