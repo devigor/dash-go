@@ -10,7 +10,10 @@ type SignInFormProps = {
 }
 
 const signInFormSchema = yup.object().shape({
-  email: yup.string().required('Email is requried').email('Please, insert a valid email'),
+  email: yup
+    .string()
+    .required('Email is requried')
+    .email('Please, insert a valid email'),
   password: yup.string().required('Password is required'),
 })
 
